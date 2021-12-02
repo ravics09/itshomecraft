@@ -1,0 +1,28 @@
+.header {
+  text-align: center;
+  padding-top: 5px;
+}
+.title {
+  color: black !important;
+  font-family: "Times New Roman", Times, serif;
+}
+.navbar {
+  border-bottom: 1px solid lightgray !important;
+  border-top: 1px solid lightgray !important;
+  color: black !important;
+  background-color: #ffffff !important;
+}
+.navbrand {
+  color: black !important;
+  font-family: "Times New Roman", Times, serif;
+}
+.navLink {
+  color: black !important;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media (max-width: 600px) {
+  /* .navbrand{
+    color: aqua !important;
+  } */
+}
