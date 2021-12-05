@@ -8,6 +8,7 @@ import Footer from "./components/Footer/index";
 import Home from "./pages/Home/home";
 import SignIn from "./pages/SignIn/signin";
 import SignUp from "./pages/SignUp/signup";
+import ForgotPassword from "./pages/ForgotPassword/forgotPassword";
 
 import * as routes from "./constants/routes";
 
@@ -21,6 +22,7 @@ const App = () => {
             <Route exact={true} path={routes.HOME} element={<Home />} />
             <Route exact={true} path={routes.SIGNIN} element={<SignIn />} />
             <Route exact={true} path={routes.SIGNUP} element={<SignUp />} />
+            <Route exact={true} path={routes.FORGOTPASSWORD} element={<ForgotPassword />} />
             {/* <Route path="*" element={<NotFound/>}/> */}
           </Routes>
         </Container>

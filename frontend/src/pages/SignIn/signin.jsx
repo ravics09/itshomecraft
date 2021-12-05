@@ -117,7 +117,7 @@ const SignIn = () => {
               </Row>
               <Row className="mb-3">
                 <Link
-                  to="/forgetpassword"
+                  to="/forgotpassword"
                   style={{ color: "black" }}
                   as={Col}
                   md="12"
