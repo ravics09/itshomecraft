@@ -17,6 +17,11 @@ import Card4 from "./../../assets/images/carouselmages/card4.png";
 import BestGift1 from "./../../assets/images/bestGifts/best1.jpg";
 import BestGift2 from "./../../assets/images/bestGifts/best2.jpg";
 
+import Category1 from "./../../assets/images/category/art.jpg";
+import Category2 from "./../../assets/images/category/cloth.jpg";
+import Category3 from "./../../assets/images/category/wooden.jpg";
+import Category4 from "./../../assets/images/category/gift.jpg";
+
 const { innerHeight: winHight } = window;
 
 const cardData = [
@@ -64,6 +69,29 @@ const cardData = [
     description: "Hand made compass build with wooden and science",
   },
 ];
+
+const categoryData = [
+  {
+    _id: "5d713995b721c3bb38c1f5d0",
+    name: "Cloths",
+    categoryImage: Category2,
+  },
+  {
+    _id: "5d713995b721c3bb38c1f5d3",
+    name: "Furniture",
+    categoryImage: Category3,
+  },
+  {
+    _id: "5d713995b721c3bb38c1f520",
+    name: "Art",
+    categoryImage: Category1,
+  },
+  {
+    _id: "5d713995b721c3bb58c1f520",
+    name: "Gifts",
+    categoryImage: Category4,
+  }
+]
 
 const CarouselSection = () => {
   const [index, setIndex] = useState(0);
@@ -167,11 +195,14 @@ const Home = () => {
         </p>
       </div>
 
-      <div className={HomeStyle.middleSection}>
+      <div className={HomeStyle.middleSection} style={{height: '500px'}}>
         <h3 className={HomeStyle.middleSectionTitle}>Top Categories</h3>
+        <Button variant="outline-secondary" size="sm">
+          View All
+        </Button>
         <Row>
-          {cardData
-            ? cardData.map((item) => (
+          {categoryData
+            ? categoryData.map((item) => (
                 <Col key={item._id} sm={12} md={6} lg={4} xl={3}>
                   <div
                     className={HomeStyle.categoryCard}
@@ -179,10 +210,10 @@ const Home = () => {
                   >
                     <img
                       className={HomeStyle.categoryImage}
-                      src={item.productImage}
+                      src={item.categoryImage}
                     />
                     <div className={HomeStyle.categoryTitle}>
-                      <Button variant="success">CategoryName</Button>
+                      <Button variant="success">{item.name}</Button>
                     </div>
                   </div>
                 </Col>
