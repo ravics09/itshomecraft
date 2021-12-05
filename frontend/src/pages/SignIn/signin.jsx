@@ -32,7 +32,10 @@ const SignIn = () => {
   const [checkboxChecked, setCheckboxChecked] = useState(false);
 
   return (
-    <div className={SignInStyle.formContainer} style={{height: window.innerHeight}}>
+    <div
+      className={SignInStyle.formContainer}
+      style={{ height: window.innerHeight }}
+    >
       <Row>
         <Formik
           validationSchema={validationSchema}
@@ -56,9 +59,9 @@ const SignIn = () => {
             errors,
           }) => (
             <Form onSubmit={handleSubmit} className={SignInStyle.signInForm}>
-              <Row>
+              <div style={{ textAlign: "center" }}>
                 <h3>Customer Sign In</h3>
-              </Row>
+              </div>
               <Row className="mb-3">
                 <Form.Group as={Col} md="12" controlId="validationFormEmail">
                   <Form.Label>Email</Form.Label>
