@@ -1,0 +1,23 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray !important;
+  }
+  .signUpForm {
+    width: 360px;
+    height: 100%;
+    padding-top: 5px;
+    color: black !important;
+  }
+  .formControl {
+    color: black;
+    width: 100%;
+  }
+  .sigupBtn {
+    background-color: #f16e0a !important;
+    border: #fff !important;
+    border-radius: 10px !important;
+    border-width: 10px !important;
+  }
+  
