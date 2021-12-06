@@ -1,0 +1,26 @@
+.container{
+    /* /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
+    background-color: lightpink;
+}
+.innerContainer{
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: start; */
+    width: 500px;
+    background-color: lightgray !important;
+}
+.card{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border:1px solid lightgray;
+    border-radius:10px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.cardText{
+    text-align:left;
+}

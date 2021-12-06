@@ -4,3 +4,5 @@ export const SIGNIN = "/signin";
 export const SIGNOUT = "/signout";
 export const FORGOTPASSWORD = "/forgotpassword";
 export const RESETPASSWORD = "/resetpassword";
+export const USERACCOUNT = "/useraccount";
+export const EDITPROFILE = "/editprofile"
