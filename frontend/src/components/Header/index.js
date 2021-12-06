@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
+import { BsCart } from "react-icons/bs";
 
 import * as routes from "./../../constants/routes";
 import headerStyle from "./style.module.css";
@@ -56,18 +57,25 @@ const Header = () => {
                   Gift
                 </Nav.Link>
                 <Nav.Link as={NavLink} to="/" className={headerStyle.navLink}>
-                  Trending
+                  Cloths
                 </Nav.Link>
                 <NavDropdown title="Categories" id="navbarScrollingDropdown">
-                  <NavDropdown.Item href="#action3">Mom Item</NavDropdown.Item>
+                  <NavDropdown.Item href="#action3">Painting</NavDropdown.Item>
                   <NavDropdown.Item href="#action4">
-                    Metal Item
+                    Metalic Items
                   </NavDropdown.Item>
                   <NavDropdown.Item href="#action5">
-                    Wooden Item
+                    Wooden Items
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action5">
+                    Musical Instruments
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
+
+              <Nav.Link as={NavLink} to="/" className={headerStyle.navLink}>
+                <BsCart />
+              </Nav.Link>
               <Button variant="primary" size="sm" as={NavLink} to="/signin">
                 SignIn
               </Button>

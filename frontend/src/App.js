@@ -9,6 +9,7 @@ import Home from "./pages/Home/home";
 import SignIn from "./pages/SignIn/signin";
 import SignUp from "./pages/SignUp/signup";
 import ForgotPassword from "./pages/ForgotPassword/forgotPassword";
+import ResetPassword from "./pages/ResetPassword/resetPassword";
 
 import * as routes from "./constants/routes";
 
@@ -23,6 +24,7 @@ const App = () => {
             <Route exact={true} path={routes.SIGNIN} element={<SignIn />} />
             <Route exact={true} path={routes.SIGNUP} element={<SignUp />} />
             <Route exact={true} path={routes.FORGOTPASSWORD} element={<ForgotPassword />} />
+            <Route exact={true} path={routes.RESETPASSWORD} element={<ResetPassword />} />
             {/* <Route path="*" element={<NotFound/>}/> */}
           </Routes>
         </Container>

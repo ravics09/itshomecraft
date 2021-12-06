@@ -97,7 +97,7 @@ const ForgotPassword = () => {
                 </Button>
               </Row>
               <Row className="mb-2">
-                <Link to="/signin" style={{ color: "white" }}>
+                <Link to="/signin" style={{ color: "black" }}>
                   Back To Sign In Page ?
                 </Link>
               </Row>
