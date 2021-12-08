@@ -12,6 +12,7 @@ import ForgotPassword from "./pages/ForgotPassword/forgotPassword";
 import ResetPassword from "./pages/ResetPassword/resetPassword";
 import UserAccount from "./pages/UserAccount/userAccount";
 import EditProfile from "./pages/EditProfile/editProfile";
+import AddProduct from "./pages/AddProduct/addProduct";
 
 import * as routes from "./constants/routes";
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route exact={true} path={routes.RESETPASSWORD} element={<ResetPassword />} />
             <Route exact={true} path={routes.USERACCOUNT} element={<UserAccount />} />
             <Route exact={true} path={routes.EDITPROFILE} element={<EditProfile />} />
+            <Route exact={true} path={routes.ADDPRODUCT} element={<AddProduct />} />
             {/* <Route path="*" element={<NotFound/>}/> */}
           </Routes>
         </Container>
