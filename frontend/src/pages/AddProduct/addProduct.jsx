@@ -4,10 +4,71 @@ import * as yup from "yup";
 import { Formik } from "formik";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Form, Row, Col, Tabs, Tab } from "react-bootstrap";
-import { BsFillEyeFill, BsFillEyeSlashFill, BsLock } from "react-icons/bs";
-import { AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 
 import AddProductStyle from "./addProduct.module.css";
+
+const productData = [
+  {
+    productId: "1",
+    productName: "Compass",
+    description: "its made of wooden material",
+    productImage: "",
+    categoryId: "1234",
+    quantity: "20",
+    inStock: "Yes",
+    brandName: "Vilsen",
+    model: "small",
+    price: "200",
+  },
+  {
+    productId: "2",
+    productName: "Telescope",
+    description: "its made of wooden material",
+    productImage: "",
+    categoryId: "1234",
+    quantity: "10",
+    inStock: "Yes",
+    brandName: "Sooler",
+    model: "big",
+    price: "20000",
+  },
+  {
+    productId: 3,
+    productName: "Rooler",
+    description: "its made of wooden material",
+    productImage: "",
+    categoryId: "6789",
+    quantity: "40",
+    inStock: "No",
+    brandName: "Vilsen",
+    model: "middle",
+    price: "100",
+  },
+  {
+    productId: 4,
+    productName: "Glass Mirror",
+    description: "its made of wooden body",
+    productImage: "",
+    categoryId: "6789",
+    quantity: "15",
+    inStock: "No",
+    brandName: "Vilsen",
+    model: "middle",
+    price: "250",
+  },
+  {
+    productId: 4,
+    productName: "Wooden Chess",
+    description: "its made of wooden material",
+    productImage: "",
+    categoryId: "1234",
+    quantity: "24",
+    inStock: "Yes",
+    brandName: "Sooler",
+    model: "small",
+    price: "350",
+  },
+];
 
 const initialValues = {
   productName: "",
@@ -17,7 +78,7 @@ const initialValues = {
   tags: "",
   inStock: "Yes",
   category: "Gift",
-  productImages: ""
+  productImages: "",
 };
 
 const validationSchema = yup.object().shape({
@@ -306,7 +367,55 @@ const AddProduct = () => {
   };
 
   const ListProductTab = () => {
-    return <h3>All products will listed here...</h3>;
+    return (
+      <>
+        <Row>
+          <Col>
+            <span className={AddProductStyle.listHeader}>Name</span>
+          </Col>
+          <Col>
+            <span className={AddProductStyle.listHeader}>Category</span>
+          </Col>
+          <Col>
+            <span className={AddProductStyle.listHeader}>Quantity</span>
+          </Col>
+          <Col>
+            <span className={AddProductStyle.listHeader}>Price</span>
+          </Col>
+          <Col></Col>
+        </Row>
+        <hr />
+        {productData.map((item, index) => {
+          return (
+            <Row key={index}>
+              <Col>
+                <p>{item.productName}</p>
+              </Col>
+              <Col>
+                <p>{item.categoryId}</p>
+              </Col>
+              <Col>
+                <p>{item.quantity}</p>
+              </Col>
+              <Col>
+                <p>{item.price}</p>
+              </Col>
+              <Col>
+                <>
+                  <Button variant="success" size="sm">
+                    Edit
+                  </Button>
+                  &nbsp; &nbsp;
+                  <Button variant="danger" size="sm">
+                    Delete
+                  </Button>
+                </>
+              </Col>
+            </Row>
+          );
+        })}
+      </>
+    );
   };
 
   return (
